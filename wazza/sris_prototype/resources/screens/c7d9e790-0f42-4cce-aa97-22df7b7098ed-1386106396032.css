@@ -1,0 +1,16 @@
+#s-c7d9e790-0f42-4cce-aa97-22df7b7098ed {
+  background-color: transparent;
+  background-image: none;
+  min-width: 0px;
+  min-height: 0px;
+}
+#s-c7d9e790-0f42-4cce-aa97-22df7b7098ed > #alignmentBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#s-c7d9e790-0f42-4cce-aa97-22df7b7098ed > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

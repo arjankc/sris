@@ -1,0 +1,543 @@
+/* StrongCode Labs */
+/** CSS begin **/
+@font-face {
+    font-family: 'pixelf';
+    src: url('fonts/slkscr-webfont.eot');
+    src: url('fonts/slkscr-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('fonts/slkscr-webfont.woff') format('woff'),
+         url('fonts/slkscr-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+	letter-spacing:-0.5px;
+
+}
+
+@font-face {
+	
+	font-family: 'georgia';
+  	src: url("fonts/georgia.ttf") format('truetype');
+	
+	font-family: 'georgiab';
+  	src: url("fonts/georgiab.ttf") format('truetype');
+	
+	font-family: 'georgiai';
+  	src: url("fonts/georgiai.ttf") format('truetype');
+	
+	font-family: 'seguin';
+  	src: url("fonts/segoeui.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'segui';
+  	src: url("fonts/segoeuil.ttf") format('truetype');
+}
+
+.fltleft {
+	float:left;
+}
+
+.fltright {
+	float:right;
+}
+
+.clear {
+	margin:0;
+	padding:0;
+	clear:both;
+}
+
+@keyframes blink
+{
+0%   {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes blink /* Firefox */
+{
+0%   {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes blink /* Safari and Chrome */
+{
+0%   {opacity:0;}
+100% {opacity:1;}
+}
+
+
+/* stuffOpacity1 */
+@keyframes stuffOp1
+{
+0%   {opacity:0.1;}
+20% {opacity:0.1;}
+30% {opacity:1;}
+40% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+
+@-moz-keyframes stuffOP1 /* Firefox */
+{
+0%   {opacity:0.1;}
+20% {opacity:0.1;}
+30% {opacity:1;}
+40% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+
+@-webkit-keyframes stuffOP1 /* Safari and Chrome */
+{
+0%   {opacity:0.1;}
+20% {opacity:0.1;}
+30% {opacity:1;}
+40% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+/* stuffOpacity2 */
+@keyframes stuffOp2
+{
+0%   {opacity:0.1;}
+40%  {opacity:0.1;}
+50% {opacity:1;}
+60% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+
+@-moz-keyframes stuffOP2 /* Firefox */
+{
+0%   {opacity:0.1;}
+40%  {opacity:0.1;}
+50% {opacity:1;}
+60% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+
+@-webkit-keyframes stuffOP2 /* Safari and Chrome */
+{
+0%   {opacity:0.1;}
+40%  {opacity:0.1;}
+50% {opacity:1;}
+60% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+/* stuffOpacity3 */
+@keyframes stuffOp3
+{
+0%   {opacity:0.1;}
+60%  {opacity:0.1;}
+70% {opacity:1;}
+80% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+
+@-moz-keyframes stuffOP3 /* Firefox */
+{
+0%   {opacity:0.1;}
+60%  {opacity:0.1;}
+70% {opacity:1;}
+80% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+
+@-webkit-keyframes stuffOP3 /* Safari and Chrome */
+{
+0%   {opacity:0.1;}
+60%  {opacity:0.1;}
+70% {opacity:1;}
+80% {opacity:0.5;}
+100% {opacity:0.5;}
+}
+
+
+body {
+	background:url(../images/pattern.jpg) top left repeat;
+	font-size:15px;
+	color:#141414;
+	text-shadow:#FFF 0px 1px 0px;
+	-webkit-font-smoothing: antialiased;
+	height:100%;
+}
+
+
+#hintAbs {
+	position: absolute;
+	top: 90%;
+	left: 10%;
+	width: auto;
+	text-align: right;
+}
+
+#hintAbs:hover {
+	opacity: 1;
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+}
+span.redCorp {
+	color:#c70323;
+}
+
+.bar {
+	z-index:5555555;
+	width:100%;
+	height:73px;
+	background: url(../images/barBg.jpg) top left repeat-x;
+	position:absolute;
+	bottom:60px;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	transition:all 0.3s;
+	opacity:1;
+}
+
+.bar:not(:hover) {
+    opacity: 0.3;
+}
+
+#hintBox {
+	visibility:hidden;
+	padding:7px 5px 8px 12px;
+	position:relative;
+	left:90px;
+	width:75%;
+	background:#141414;
+	color:#f3f3f3;
+	font-size:14px;
+	font-family:segui;
+	height:23px;
+	display:block;
+	line-height:normal;
+	margin:-38px -200px 0px 0px;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	transition:all 0.5s;
+	opacity:0;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	text-transform:uppercase;
+
+}
+
+.bar:hover #hintBox {
+	width:100%;
+	visibility:visible;
+	opacity:1;
+	margin:-38px 0px 0px 0px;
+}
+
+#navigation {
+	width:75%;
+	height:35px;
+}
+
+#navigation ul{
+	list-style:none;
+}
+
+#navigation ul li{
+	float:left;
+	margin:0;
+	height:35px;
+	background:#c91735;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	transition:all 0.3s;
+}
+
+#navigation ul li a{
+	display:block;
+	font-size:20px;
+	padding:12px 10px 0px 10px;
+	text-decoration:none;
+	line-height:normal;
+	font-family:seguin;
+	color:#f4f4f4;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing:1px;
+	-webkit-transition: all 0.5s;
+    -moz-transition:    all 0.5s;
+    -ms-transition:     all 0.5s;
+    -o-transition:      all 0.5s;
+    transition:         all 0.5s;
+}
+
+#navigation ul li:hover {
+	background:#940c22;
+}
+
+#navigation ul li:hover a{
+	margin-top:-5px;
+}
+
+ul#social{
+	float:right;
+}
+ul#social li a img{
+	padding-top:20%;
+	max-width:80%;
+}
+ul#social li a{
+	padding:0px 10px 0px 10px;
+}
+
+ul#social li:hover{
+	background:#c91735;
+}
+#logoDiv {
+	width:25%;
+}
+
+/* impress layout custom design */
+#impress {
+	transition:all 0.3s;
+	width:100%;
+	margin:0 auto;
+}
+
+.step {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+    position:relative;
+}
+
+.step:not(.active) {
+    opacity: 0.1;
+}
+
+#intro{
+}
+
+#intro img{
+	margin: 30px 0px 0px 130px;
+}
+
+#experiment{
+	display: inline-block;
+	font-size:90px;
+	line-height:90px;
+}
+
+#i{
+	width:50px;
+	height:100px;
+	display:inline-block;
+	margin: 0px 4px 0px 4px;
+	padding-top:10px;
+	position:relative;
+}
+
+#flask{
+	width:100%;
+	z-index:24;
+}
+#bubbles{
+	width:40%;
+	position:absolute;
+	top:70%;
+	right:35%;
+	z-index:23;
+	opacity:0;
+	-webkit-transition: opacity 3s, top 3s;
+    -moz-transition:    opacity 3s, top 3s;
+    -ms-transition:     opacity 3s, top 3s;
+    -o-transition:      opacity 3s, top 3s;
+    transition:         opacity 3s, top 3s;
+}
+
+.active #bubbles{
+	top:0%;
+	opacity:1;
+}
+.textOnly{
+	width:900px;
+	text-align:center;
+}
+
+#weAre{
+	font-size:150px;
+}
+
+#webArtist{
+	text-align:left;
+	font-size:200px;
+	line-height:140px;
+}
+
+#pixels{
+	font-family:pixelf;
+	font-size:120%;
+}
+#codes{
+	font-size:120%;
+}
+#cursor{
+	font-size:75%;
+	animation: blink 1s infinite;
+	-moz-animation: blink 1s infinite; /* Firefox */
+	-webkit-animation: blink 1s infinite; /* Safari and Chrome */
+
+}
+#twoMinds{
+	width:1024px;
+}
+#profile{
+	width:100%;
+}
+
+.prof{
+	width:33%;
+	float: left;
+}
+a .info {
+	text-decoration:none;
+	color:#000;
+}
+#aayush{
+}
+#kshitiz{
+}
+.sketch img{
+	width: 220px;
+	-webkit-transition: width .3s;
+    -moz-transition:    width .3s;
+    -ms-transition:     width .3s;
+    -o-transition:      width .3s;
+    transition:         width .3s;
+}
+
+.sketch img:hover {
+	width: 300px;
+}
+.info{
+	width:100%;
+	font-size:30px;
+	margin-top:-40px;
+}
+.info_name{
+	font-size:100%;
+	margin:25px 0px 0px 0px;
+}
+
+.info p{
+	font-size:70%;
+	margin-top:-40px;
+}
+
+#weMake{
+	display: block;
+	width:1000px;
+	height:500px;
+	text-align:center;
+}
+#stuff{
+	width:100%;
+	height:100%;
+}
+.makeThings{
+	display:inline;
+	width:auto;
+	float:left;
+	padding:0px 0px 0px 10px;
+	height:100%;
+	opacity:0.1;
+	font-size:30px;
+	margin:0px 30px 0px 0px;
+	font-family:segui;
+	text-transform:capitalize;
+	letter-spacing:-0.5px;
+}
+
+.makeThings img{
+	height:40%;
+
+}
+#cool{
+	display: block;
+	width:100%;
+	font-size:60px;
+}
+
+.active #phone{
+	animation: stuffOP1 8s forwards;
+	-moz-animation: stuffOP1 8s forwards; /* Firefox */
+	-webkit-animation: stuffOP1 8s forwards; /* Safari and Chrome */
+}
+
+.active #browser{
+	animation: stuffOP2 8s forwards;
+	-moz-animation: stuffOP2 8s forwards; /* Firefox */
+	-webkit-animation: stuffOP2 8s forwards; /* Safari and Chrome */
+}
+.active #desktop{
+	animation: stuffOP3 8s forwards;
+	-moz-animation: stuffOP3 8s forwards; /* Firefox */
+	-webkit-animation: stuffOP3 8s forwards; /* Safari and Chrome */
+}
+
+#contact{
+	width:900px ;
+}
+
+#contact_form{
+	margin:0px auto;
+	width:50%;
+	height:100%;
+}
+
+#contact_form input, #contact_form textarea {
+	width: 90%;
+	font-size: 32%;
+	margin: 0px 0px 6px 0px !important;
+	font-family:seguin;
+	letter-spacing:1px;
+	border:1px solid #CCC;
+	float:left;
+	color:#333;
+}
+
+#contact_form textarea {
+}
+
+#contact_form textarea:focus, #contact_form input:focus {
+	border: 1px solid #c60021;
+}
+
+#contact_form input.submit-button {
+	width: 100px;
+	float: left;
+	background:#c60021;
+	color:#f4f4f4;
+	font-size:22px;
+	font-family:seguin;
+}
+
+input, textarea {
+	padding:9px;
+	border-radius:8px;
+	border-color:#ccc;
+	background:#FFF;
+	font-size:10px;
+	
+}
+
+.seguiCl {
+	font-family:segui;
+	letter-spacing:-0.5px;
+	font-size:14px;
+}
+
+span.error {
+	position:absolute;
+	top:0px;
+	font-size:18px;
+	font-weight:bold;
+	color:#F00;
+	float:left;
+}

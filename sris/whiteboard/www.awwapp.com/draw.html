@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.awwapp.com/draw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 24 Nov 2013 16:26:26 GMT -->
+<head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, height=device-height user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi">
+<title>A Web Whiteboard</title>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://static.awwapp.com/plugin/1.0/excanvas.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../static.awwapp.com/plugin/1.0/aww.css"/>
+
+<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="../awwapp.com_7000/nowjs/now.js"></script>
+<script type="text/javascript" src="../static.awwapp.com/plugin/1.0/aww.min.js"></script>
+
+<link rel="apple-touch-icon" href="apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<script type="text/javascript">
+    /* Google Analytics */
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-638384-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    $(function() {
+        var aww = $('#container').awwCanvas({
+            apiKey: "b7a7e414-cf42-4b0a-b7d3-83a68abbfe67",
+            shrinkCanvas: false,
+        });
+        $(window).resize(function() {
+            aww.resize();
+        });
+    });
+</script></head>
+
+<body class="background"><div id="container"></div>
+</body>
+<!-- Mirrored from www.awwapp.com/draw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 24 Nov 2013 16:26:35 GMT -->
+</html>
